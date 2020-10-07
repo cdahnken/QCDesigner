@@ -40,7 +40,7 @@ public class QC_R extends QCOperation{
     }
 
     @Override
-    public String emit() {
+    public String emitOctave() {
         if(getnWires()==1){
             int n0=getWires()[0]+1;
             return "(c{"+n0+"}*c{"+n0+"}'+exp(1.0i*pi/"+(1<<N)+")*c{"+n0+"}'*c{"+n0+"})";

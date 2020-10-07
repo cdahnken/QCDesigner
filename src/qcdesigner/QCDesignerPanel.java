@@ -74,7 +74,7 @@ public class QCDesignerPanel extends javax.swing.JPanel {
     public int rightMargin=20;
     public int topMargin=60;
 //    public int nTimeSteps=1;
-    Color focuscolor=new Color(0.5f, 0.5f, 0.0f, 0.7f);
+    private Color focuscolor=new Color(0.5f, 0.5f, 0.0f, 0.7f);
 //    Color forecolor=Color.BLACK;
 //    Color backcolor=Color.WHITE;
     int focusx=0;
@@ -281,12 +281,12 @@ public class QCDesignerPanel extends javax.swing.JPanel {
             TheAlgorithm.getTheOperations().remove(focusx);
             TheAlgorithm.getTheOperations().add(new QC_NOP());
         }else if(evt.getKeyChar()=='e'){
-            String s=TheAlgorithm.getTheOperations().elementAt(0).emit();
+            String s=TheAlgorithm.getTheOperations().elementAt(0).emitOctave();
             for(int i=1;i<TheAlgorithm.getNOperations();i++){
                 System.out.println(""+TheAlgorithm.getTheOperations().elementAt(i).getClass().getName());
                 System.out.println(""+QC_NOP.class.getName());
                 if(!TheAlgorithm.getTheOperations().elementAt(i).getClass().getName().equalsIgnoreCase(QC_NOP.class.getName())){
-                    s=TheAlgorithm.getTheOperations().elementAt(i).emit()+" ... \n *"+s;
+                    s=TheAlgorithm.getTheOperations().elementAt(i).emitOctave()+" ... \n *"+s;
                 }
             }
             if(s.length()>1)
@@ -428,6 +428,20 @@ public class QCDesignerPanel extends javax.swing.JPanel {
      */
     public void setnTimeSteps(int nTimeSteps) {
         this.nTimeSteps = nTimeSteps;
+    }
+
+    /**
+     * @return the focuscolor
+     */
+    public Color getFocuscolor() {
+        return focuscolor;
+    }
+
+    /**
+     * @param focuscolor the focuscolor to set
+     */
+    public void setFocuscolor(Color focuscolor) {
+        this.focuscolor = focuscolor;
     }
     
 

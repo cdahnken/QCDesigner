@@ -14,7 +14,7 @@ import java.awt.Graphics;
 public class QC_NOP extends QCOperation{
 
     @Override
-    public String emit() {
+    public String emitOctave() {
         return "";
     }
 

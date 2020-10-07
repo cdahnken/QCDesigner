@@ -37,7 +37,7 @@ public class QC_M extends QCOperation{
     }
 
     @Override
-    public String emit() {
+    public String emitOctave() {
         int n0=getWires()[0]+1;
         return "(c{"+n0+"}+c{"+n0+")')";
     }

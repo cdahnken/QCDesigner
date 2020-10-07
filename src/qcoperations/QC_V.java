@@ -45,7 +45,7 @@ public class QC_V extends QCOperation{
     }
 
     @Override
-    public String emit() {
+    public String emitOctave() {
         return "ERROR!";        
     }
 

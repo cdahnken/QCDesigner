@@ -44,7 +44,7 @@ public class QC_SWAP extends QCOperation{
     }
 
     @Override
-    public String emit() {
+    public String emitOctave() {
         String s="";
         int n1=getWires()[getnWires()-1]+1;
         int n2=getWires()[getnWires()-2]+1;

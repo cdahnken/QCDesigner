@@ -35,7 +35,7 @@ public class QCOperation implements Serializable{
     
     }
     
-    public String emit(){
+    public String emitOctave(){
         return "0";
     }
     
